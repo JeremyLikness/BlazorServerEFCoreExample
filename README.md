@@ -24,7 +24,6 @@ The server-focused blog post will be updated here shortly.
 * Azure AD Authentication
 * Extended identity features to audit user creation, modification, email confirmation, and deletion
 * Entity Framework Core
-* Multiple data contexts
 * Entity Framework Core logging
 * Shadow properties: the database tracks row version, the user who created the entity and timestamp, and the user who last modified the entity and timestamp, without having to define these properties on the C# domain class
 * Automatic audit that tracks changes with a before/after snapshot and is generated at the data context level
@@ -34,7 +33,6 @@ The server-focused blog post will be updated here shortly.
 * Dynamic filtering and sorting with serverside evaluation
 * 99% of the UI is contained in a Razor class library that is usable from both Blazor WebAssembly and Blazor Server applications
 * Example of the repository pattern: the client and server use the same interface with a different implementation
-* Use of `IHttpClientFactory` to create a custom client with an authorization message handler
 
 ## Quick start
 
