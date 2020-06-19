@@ -51,7 +51,7 @@ The server-focused blog post will be updated here shortly.
 
    `git clone https://github.com/jeremylikness/BlazorServerEFCoreExample.git`
 1. Navigate to the newly created directory
-1. Navigate to the empty `BlazorWasmEFCoreExample` directory. This is where the original repo will be cloned.
+1. Navigate to the empty `BlazorWasmEFCoreExample` sub-directory. This is where the original repo will be cloned. Assuming you cloned with the defaults, your path will be `./BlazorServerEFCoreExample/BlazorWasmEFCoreExample`.
 1. Type `git submodule init` to initialize the dependency on the original repo.
 1. Type `git submodule update` to clone the files.
 1. If you don't have `localdb` installed, update `appsettings.json` and `appsettings.Development.json` in the `ContactsApp.Server` project to point to a valid database instance. 
