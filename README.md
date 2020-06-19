@@ -1,5 +1,7 @@
 # BlazorServerEFCoreExample
 
+![Application screenshot](./appsnap.jpg)
+
 Example of a Blazor Server project that uses Entity Framework Core for data access.
 
 The project relies on a set of core, shared libraries that were created for a [Blazor WebAssembly](https://github.com/JeremyLikness/BlazorWasmEFCoreExample) project.
