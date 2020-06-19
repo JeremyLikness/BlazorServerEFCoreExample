@@ -80,6 +80,7 @@ See note at the end of the next section.
 ## Migrations for Contacts Database
 
 See the [original repo](https://github.com/JeremyLikness/BlazorWasmEFCoreExample) for information on setting up migrations.
+
 ---
 
 Submit any feedback, questions, suggestions, or issues [here](https://github.com/JeremyLikness/BlazorServerEFCoreExample/issues/new).
