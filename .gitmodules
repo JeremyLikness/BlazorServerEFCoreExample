@@ -1,0 +1,3 @@
+[submodule "BlazorWasmEFCoreExample"]
+	path = BlazorWasmEFCoreExample
+	url = https://github.com/JeremyLikness/BlazorWasmEFCoreExample
