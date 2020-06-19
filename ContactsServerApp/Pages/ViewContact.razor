@@ -1,0 +1,15 @@
+﻿@page "/View/{ContactId:int}"
+
+@using Microsoft.AspNetCore.Authorization
+
+@attribute [Authorize]
+
+<ViewContactControl ContactId="ContactId" />
+
+@code {
+    /// <summary>
+    /// Id from route of contact.
+    /// </summary>
+    [Parameter]
+    public int ContactId { get; set; }
+}

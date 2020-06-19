@@ -1,0 +1,47 @@
+﻿@page "/"
+@page "/{Page:int}"
+
+@using Microsoft.AspNetCore.Authorization
+@using ContactsApp.BaseRepository
+@using ContactsApp.Model
+@using ContactsApp.DataAccess
+@using System.Security.Claims
+
+@inject SeedContacts Seed
+@inject ClaimsPrincipal User
+@inject IContactFilters Filters
+
+@attribute [Authorize]
+
+<ListControl Page="Page"
+             FetchContactsAsync="(repo, contacts) => FetchAsync(repo, contacts)" />
+
+@code {
+    /// <summary>
+    /// Allow route-based navigation.
+    /// </summary>
+    [Parameter]
+    public int Page { get; set; }
+
+    /// <summary>
+    /// Pass in the actual work so this can be reused between client and server
+    /// </summary>
+    /// <param name="repo">The <see cref="IBasicRepository{Contact}"/> to use.</param>
+    /// <param name="contacts">How to handle the returned <see cref="ICollection{Contact}"/>.</param>
+    /// <returns>A <see cref="Task"/></returns>
+    public async Task FetchAsync(IBasicRepository<Contact> repo,
+        Action<ICollection<Contact>> contacts)
+    {
+        ICollection<Contact> contactList = null;
+        var adapter = new GridQueryAdapter(Filters);
+        await repo.QueryAsync(
+            async query => contactList = await adapter.FetchAsync(query));
+        contacts(contactList);
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await Seed.CheckAndSeedDatabaseAsync(User);
+        await base.OnInitializedAsync();
+    }
+}
