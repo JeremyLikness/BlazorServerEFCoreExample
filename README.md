@@ -17,7 +17,9 @@ For the latest version, read about the latest round of refactoring here:
 
 - [Build a Blazor WebAssembly LOB App Part 4: Make it Blazor-Friendly](https://blog.jeremylikness.com/blog/build-a-blazor-webassembly-line-of-business-app-part-4/)
 
-The server-focused blog post will be updated here shortly.
+The server-focused blog post is available here:
+
+- [Build an Azure AD Secured Blazor Server Line of Business App](https://blog.jeremylikness.com/blog/build-a-blazor-server-azure-ad-secured-lob-app/)
 
 ## Features
 
