@@ -55,6 +55,7 @@ The server-focused blog post will be updated here shortly.
 1. If you don't have `localdb` installed, update `appsettings.json` and `appsettings.Development.json` in the `ContactsApp.Server` project to point to a valid database instance. 
 1. The `blazorcontactsdb` is used for the application database and must match `ContactContext.BlazorContactsDb` in the `ContactsApp.DataAccess` project (the default value is `blazorcontactsdb`).
 1. Update the `AzureAD` section to point to your Azure AD domain, instance, tenant, and client.
+1. Ensure that **ContactsServerApp** is set as the startup project.
 
 ### Visual Studio
 
